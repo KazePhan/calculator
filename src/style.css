@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: linear-gradient(to left, #00aaff, #0404aa);
+}
+.cal-grid {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  justify-content: center;
+}
+.span-tow {
+  grid-column: span 2;
+}
+.output {
+  grid-column: 1/-1;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-result {
+  color: white;
+  font-size: 1.5rem;
+}
+.output .current-result {
+  color: white;
+  font-size: 3rem;
+}
+.cal-grid > button {
+  cursor: pointer;
+  font-size: 150%;
+  border: 1px solid white;
+  outline: none;
+}
+.cal-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
